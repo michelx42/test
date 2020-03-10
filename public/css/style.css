@@ -1,0 +1,19 @@
+.id-field {
+  width: 50px;
+}
+
+.name-field {
+  width: 250px;
+}
+
+.address-field {
+  width: 250px;
+}
+
+.zip-field {
+  width: 50px;
+}
+
+.city-field {
+  width: 100px;
+}

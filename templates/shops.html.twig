@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('pull') }}">Pull</a>
+    <a href="{{ path('force') }}">Pull force</a>
+
+    {% for form in forms %}
+        {{ form_start(form) }}
+            {{ form_widget(form.externalId, {'attr': {'class': 'id-field'}}) }}
+            {{ form_widget(form.name, {'attr': {'class': 'name-field'}}) }}
+            {{ form_widget(form.address, {'attr': {'class': 'address-field'}}) }}
+            {{ form_widget(form.zipCode, {'attr': {'class': 'zip-field'}}) }}
+            {{ form_widget(form.city, {'attr': {'class': 'city-field'}}) }}
+
+            <button type="submit" class="btn btn-primary">Edit</button>
+        {{ form_end(form) }}
+    {% endfor %}
+{% endblock %}
